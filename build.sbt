@@ -12,11 +12,10 @@ copy := { "cp target\\scala-2.12\\ctranspiler-fastopt.js ..\\www\\hugo\\static\\
 copyProd := { "cp target\\scala-2.12\\ctranspiler-opt.js ..\\www\\hugo\\static\\js" ! }
 
 
-// TODO relative paths
 lazy val CParser = ProjectRef(file("../CParser"), "cparser")
 
 lazy val CParserWebDemo = (project in file("."))
   .settings(
-    name := "CParserWebDemo",
+    name := "cparserwebdemo",
     scalaVersion := "2.12.4"
   ).dependsOn(CParser)
